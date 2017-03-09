@@ -27,6 +27,8 @@ try these options on npm install to build, if you have problems to install
 
 ![Flow Example](images/Screenshotv001.png)
 
+[Flow JSON][3]
+
 # Debug
 
 Debug will be activated by starting Node-RED with debug mode: 
@@ -40,4 +42,4 @@ Debug will be activated by starting Node-RED with debug mode:
 
 [1]:https://nodered.org
 [2]:https://github.com/biancode
-
+[3]:https://flows.nodered.org/flow/9015efb0c2251945da20da8ff55f123e
