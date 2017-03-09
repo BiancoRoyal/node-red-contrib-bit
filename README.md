@@ -22,7 +22,11 @@ Run the following command for global install
 try these options on npm install to build, if you have problems to install
 
     --unsafe-perm --build-from-source
-    
+
+# What is it?
+
+![Flow Example](images/Screenshotv001.png)
+
 # Debug
 
 Debug will be activated by starting Node-RED with debug mode: 
