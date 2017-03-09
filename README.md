@@ -7,7 +7,7 @@
 node-red-contrib-bit 
 ========================
 
-[Node-RED][1] contribution package for Bit converting
+[Node-RED][1] contribution package for Bit splitting
 
 # Install
 
