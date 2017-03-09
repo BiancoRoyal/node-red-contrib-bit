@@ -1,0 +1,40 @@
+<!--
+ Copyright 2017 - Klaus Landsdorf (http://bianco-royal.de/)
+ All rights reserved.
+ node-red-contrib-bit
+
+ @author <a href="mailto:klaus.landsdorf@bianco-royal.de">Klaus Landsdorf</a> (Bianco Royal)
+-->
+<script type="text/javascript">
+    RED.nodes.registerType('bit-thirtytwo', {
+        category: 'function',
+        color: '#ABCDEF',
+        defaults: {
+            name: {value: ""},
+        },
+        inputs: 1,
+        outputs: 32,
+        icon: "switch.png",
+        align: 'right',
+        paletteLabel: "32Bit Split",
+        label: function () {
+            return this.name || "32Bit Split"
+        }
+    })
+</script>
+
+
+<script type="text/x-red" data-template-name="bit-thirtytwo">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="bit-thirtytwo">
+     <p>This node splits a 32Bit value to 32 single Bit outputs</p>
+
+     <p>Input: 32Bit value</p>
+     <p>Output 1-32: single Bit value</p>
+</script>
