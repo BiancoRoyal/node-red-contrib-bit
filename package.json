@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-bit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Bit helper contribution package for Node-RED.",
   "dependencies": {
     "debug": "2.6.1"
@@ -21,7 +21,9 @@
   },
   "node-red": {
     "nodes": {
+      "Bit-Simple-Sixteen": "bit/bit-simple-sixteen.js",
       "Bit-Sixteen": "bit/bit-sixteen.js",
+      "Bit-Simple-Thirtytwo": "bit/bit-simple-thirtytwo.js",
       "Bit-Thirtytwo": "bit/bit-thirtytwo.js"
     }
   },

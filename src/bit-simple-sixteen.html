@@ -1,0 +1,40 @@
+<!--
+ Copyright 2017 - Klaus Landsdorf (http://bianco-royal.de/)
+ All rights reserved.
+ node-red-contrib-bit
+
+ @author <a href="mailto:klaus.landsdorf@bianco-royal.de">Klaus Landsdorf</a> (Bianco Royal)
+-->
+<script type="text/javascript">
+    RED.nodes.registerType('bit-simple-sixteen', {
+        category: 'function',
+        color: '#ABCDEF',
+        defaults: {
+            name: {value: ""},
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "switch.png",
+        align: 'right',
+        paletteLabel: "16Bit Array",
+        label: function () {
+            return this.name || "16Bit Array"
+        }
+    })
+</script>
+
+
+<script type="text/x-red" data-template-name="bit-simple-sixteen">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+
+<script type="text/x-red" data-help-name="bit-simple-sixteen">
+     <p>This node splits a 16Bit value to an array of 16 single Bits on output.</p>
+
+     <p>Input: 16Bit value</p>
+     <p>Output: array of sixteen single Bit values</p>
+</script>

@@ -25,7 +25,7 @@ try these options on npm install to build, if you have problems to install
 
 # What is it?
 
-![Flow Example](images/Screenshotv001.png)
+![Flow Example](images/Screenshotv002.png)
 
 [Flow JSON][3]
 
