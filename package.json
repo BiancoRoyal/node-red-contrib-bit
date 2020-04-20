@@ -1,6 +1,7 @@
 {
   "name": "node-red-contrib-bit",
-  "version": "1.0.0",
+  "version": "1.0.0-alpha.0",
+  "private": true,
   "description": "Bit helper contribution package for Node-RED.",
   "dependencies": {
     "debug": "4.1.1"
@@ -17,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/biancode/node-red-contrib-bit.git"
+    "url": "git+https://github.com/BiancoRoyal/node-red-contrib-bit.git"
   },
   "node-red": {
     "nodes": {
@@ -34,9 +35,9 @@
     "bit"
   ],
   "bugs": {
-    "url": "https://github.com/biancode/node-red-contrib-bit/issues/"
+    "url": "https://github.com/BiancoRoyal/node-red-contrib-bit/issues/"
   },
-  "homepage": "https://biancode.github.io/node-red-contrib-bit/",
+  "homepage": "https://biancoroyal.github.io/node-red-contrib-bit/",
   "scripts": {
     "test": "standard --fix && mocha test --recursive --reporter dot --timeout 5000",
     "build": "gulp publish",
