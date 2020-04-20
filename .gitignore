@@ -4,3 +4,5 @@ bit
 node_modules_*/
 docs/icons
 .idea/
+docs/gen/
+code/

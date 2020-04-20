@@ -1,8 +1,8 @@
+code/
 .git
 .idea
 test
 extras
-examples
 node_modules
 .gitignore
 *.iml
@@ -11,3 +11,4 @@ Example.png
 *.conf.js
 *.log
 src
+maps/

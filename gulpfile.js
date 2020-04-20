@@ -1,5 +1,5 @@
 /**
- Copyright (c) 2017, Klaus Landsdorf (http://bianco-royal.de/)
+ Copyright (c) 2017,2018,2019,2020 Klaus Landsdorf (http://bianco-royal.de/)
  All rights reserved.
  node-red-contrib-bit - The BSD 3-Clause License
 
@@ -8,60 +8,43 @@
 
 'use strict'
 
-var gulp = require('gulp')
-var pump = require('pump')
-var htmlmin = require('gulp-htmlmin')
+const { series, src, dest } = require('gulp')
+const htmlmin = require('gulp-htmlmin')
 const jsdoc = require('gulp-jsdoc3')
 const clean = require('gulp-clean')
+const uglify = require('gulp-uglify')
+const babel = require('gulp-babel')
+const sourcemaps = require('gulp-sourcemaps')
+const pump = require('pump')
+const replace = require('gulp-replace')
 
-gulp.task('default', function () {
-  // place code for your default task here
-})
+function releaseIcons () {
+  return src('src/icons/**/*').pipe(dest('bit/icons'))
+}
 
-gulp.task('docs', ['doc', 'docIcons', 'docImages', 'docExamples'])
-gulp.task('build', ['web', 'nodejs'])
-gulp.task('publish', ['build', 'icons', 'images', 'examples', 'locale', 'docs'])
+function docIcons () {
+  return src('src/icons/**/*').pipe(dest('docs/gen/icons'))
+}
 
-gulp.task('clean', function () {
-  return gulp.src(['bit', 'docs/gen'])
-    .pipe(clean({force: true}))
-})
+function docImages () {
+  return src('images/**/*').pipe(dest('docs/gen/images'))
+}
 
-gulp.task('doc', function (cb) {
-  gulp.src(['README.md', 'src/**/*.js'], {read: false})
-    .pipe(jsdoc(cb))
-})
+function releaseLocal () {
+  return src('src/locales/**/*').pipe(dest('bit/locales'))
+}
 
-gulp.task('docIcons', function () {
-  return gulp.src('src/icons/**/*').pipe(gulp.dest('docs/gen/icons'))
-})
+function releasePublicData () {
+  return src('src/public/**/*').pipe(dest('bit/public'))
+}
 
-gulp.task('docImages', function () {
-  return gulp.src('images/**/*').pipe(gulp.dest('docs/gen/images'))
-})
+function cleanProject () {
+  return src(['bit', 'docs/gen', 'jcoverage'], { allowEmpty: true })
+    .pipe(clean({ force: true }))
+}
 
-gulp.task('docExamples', function () {
-  return gulp.src('examples/**/*').pipe(gulp.dest('docs/gen/examples'))
-})
-
-gulp.task('icons', function () {
-  return gulp.src('src/icons/**/*').pipe(gulp.dest('bit/icons'))
-})
-
-gulp.task('images', function () {
-  return gulp.src('images/**/*').pipe(gulp.dest('bit/images'))
-})
-
-gulp.task('examples', function () {
-  return gulp.src('examples/**/*').pipe(gulp.dest('bit/examples'))
-})
-
-gulp.task('locale', function () {
-  return gulp.src('src/locales/**/*').pipe(gulp.dest('bit/locales'))
-})
-
-gulp.task('web', function () {
-  return gulp.src('src/*.htm*')
+function releaseWebContent () {
+  return src('src/*.htm*')
     .pipe(htmlmin({
       minifyJS: true,
       minifyCSS: true,
@@ -74,14 +57,41 @@ gulp.task('web', function () {
       processScripts: ['text/x-red'],
       quoteCharacter: "'"
     }))
-    .pipe(gulp.dest('bit'))
-})
+    .pipe(dest('bit'))
+}
 
-gulp.task('nodejs', function (cb) {
+function releaseJSContent (cb) {
+  const anchor = '// SOURCE-MAP-REQUIRED'
+
   pump([
-    gulp.src('src/*.js'),
-    gulp.dest('bit')
-  ],
-    cb
-  )
-})
+    src('src/**/*.js')
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(replace(anchor, 'require(\'source-map-support\').install()'))
+      .pipe(babel({ presets: ['@babel/env'] }))
+      .pipe(uglify())
+      .pipe(sourcemaps.write('maps')), dest('bit')],
+  cb)
+}
+
+function codeJSContent (cb) {
+  const anchor = '// SOURCE-MAP-REQUIRED'
+
+  pump([
+    src('src/**/*.js')
+      .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(replace(anchor, 'require(\'source-map-support\').install()'))
+      .pipe(babel({ presets: ['@babel/env'] }))
+      .pipe(sourcemaps.write('maps')), dest('code')],
+  cb)
+}
+
+function doc (cb) {
+  src(['README.md', 'src/**/*.js'], { read: false })
+    .pipe(jsdoc(cb))
+}
+
+exports.default = series(cleanProject, releaseWebContent, releaseJSContent, codeJSContent, releaseLocal, releasePublicData, releaseIcons, doc, docIcons, docImages)
+exports.clean = cleanProject
+exports.build = series(cleanProject, releaseWebContent, releaseJSContent, releaseLocal, codeJSContent)
+exports.buildDocs = series(doc, docIcons, docImages)
+exports.publish = series(cleanProject, releaseWebContent, releaseJSContent, releaseLocal, codeJSContent, releasePublicData, releaseIcons, doc, docIcons, docImages)

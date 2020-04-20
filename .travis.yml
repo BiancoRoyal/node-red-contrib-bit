@@ -1,12 +1,25 @@
 language: node_js
-node_js:
-    - 6.9.4
-    - 6.9.2
-    - 4.7.2
-    - 4.7
-before_script:
-  - npm install -g gulp
+matrix:
+  include:
+    - node_js: 13
+    - node_js: "lts/*"
+    - node_js: 10
+  allow_failures:
+    - node_js: 13
+    - node_js: 10
+install:
   - npm install
-  - npm test
+  - npm install --only=dev
 script:
+  - npm test
+  - npm run coverage
   - gulp publish
+cache:
+  directories:
+    - "node_modules"
+branches:
+  only:
+    - master
+    - develop
+    - alpha
+    - beta

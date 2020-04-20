@@ -13,17 +13,17 @@
  */
 module.exports = function (RED) {
   'use strict'
-  let internalDebugLog = require('debug')('node_red_contrib_bit')
+  const internalDebugLog = require('debug')('node_red_contrib_bit')
 
   function BitSimpleThirtytwoContribNode (config) {
     RED.nodes.createNode(this, config)
 
     this.name = config.name
 
-    let node = this
+    const node = this
 
     node.on('input', function (msg) {
-      if (!(msg && msg.hasOwnProperty('payload'))) return
+      if (!(msg && {}.hasOwnProperty.call(msg, 'payload'))) return
 
       internalDebugLog(msg)
 
