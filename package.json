@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Bit helper contribution package for Node-RED.",
   "dependencies": {
-    "debug": "3.1.0"
+    "debug": "3.2.7"
   },
   "keywords": [
     "node-red",
