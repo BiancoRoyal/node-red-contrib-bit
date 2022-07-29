@@ -31,9 +31,9 @@ relevant nodes, press Ctrl-E and copy the flow data from the Export dialog.
 
 At a minimum, please include:
 
- - Version of node.js? (should be >=LTS)
- - Version of Node-RED? (should be >=v3.0.0)
- - Version of node-red-contrib-bit? (should be >=v1.0.0)
+ - Version of node.js? (should be >= 16)
+ - Version of Node-RED? (should be >= 3)
+ - Version of node-red-contrib-bit? (should be >= 1)
 
  - What is your platform? (Linux, macOS, ...)
  - What does `DEBUG=contribBit* node-red -v` log? (log files are welcome)
