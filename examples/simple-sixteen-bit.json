@@ -1,0 +1,121 @@
+[
+  {
+    "id": "dedefb7a8dc77827",
+    "type": "tab",
+    "label": "16 Bit",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "77504c95aa1ccbf3",
+    "type": "bit-simple-sixteen",
+    "z": "dedefb7a8dc77827",
+    "name": "",
+    "x": 350,
+    "y": 80,
+    "wires": [
+      [
+        "78bb1e9c8c22a49b"
+      ]
+    ]
+  },
+  {
+    "id": "29726390b8387760",
+    "type": "bit-sixteen",
+    "z": "dedefb7a8dc77827",
+    "name": "",
+    "x": 350,
+    "y": 280,
+    "wires": [
+      [
+        "fce92786fd0e9845"
+      ],
+      [
+        "fce92786fd0e9845"
+      ],
+      [
+        "fce92786fd0e9845"
+      ],
+      [
+        "fce92786fd0e9845"
+      ],
+      [
+        "fce92786fd0e9845"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "0ad8b07e0af80089",
+    "type": "inject",
+    "z": "dedefb7a8dc77827",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "16",
+    "payloadType": "num",
+    "x": 150,
+    "y": 80,
+    "wires": [
+      [
+        "77504c95aa1ccbf3",
+        "29726390b8387760"
+      ]
+    ]
+  },
+  {
+    "id": "78bb1e9c8c22a49b",
+    "type": "debug",
+    "z": "dedefb7a8dc77827",
+    "name": "debug 1",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 540,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "fce92786fd0e9845",
+    "type": "debug",
+    "z": "dedefb7a8dc77827",
+    "name": "debug 2",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 580,
+    "y": 180,
+    "wires": []
+  }
+]

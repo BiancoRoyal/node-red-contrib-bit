@@ -1,9 +1,8 @@
 /**
- Copyright (c) 2016,2017, Klaus Landsdorf (http://bianco-royal.de/)
+ Copyright (c) 2017-2022 Klaus Landsdorf (http://node-red.plus/)
  All rights reserved.
- node-red-contrib-modbus - The BSD 3-Clause License
+ node-red-contrib-bit - The BSD 3-Clause License
 
- @author <a href="mailto:klaus.landsdorf@bianco-royal.de">Klaus Landsdorf</a> (Bianco Royal)
  **/
 
 /* see http://mochajs.org/ */

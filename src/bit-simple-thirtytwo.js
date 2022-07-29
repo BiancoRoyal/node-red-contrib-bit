@@ -1,5 +1,5 @@
 /**
- Copyright 2016,2017 - Klaus Landsdorf (http://bianco-royal.de/)
+ Copyright (c) 2017-2022 Klaus Landsdorf (http://node-red.plus/)
  All rights reserved.
  node-red-contrib-bit
 
@@ -13,17 +13,17 @@
  */
 module.exports = function (RED) {
   'use strict'
-  let internalDebugLog = require('debug')('node_red_contrib_bit')
+  const internalDebugLog = require('debug')('node_red_contrib_bit')
 
   function BitSimpleThirtytwoContribNode (config) {
     RED.nodes.createNode(this, config)
 
     this.name = config.name
 
-    let node = this
+    const node = this
 
     node.on('input', function (msg) {
-      if (!(msg && msg.hasOwnProperty('payload'))) return
+      if (!(msg && Object.prototype.hasOwnProperty.call(msg, 'payload'))) return
 
       internalDebugLog(msg)
 

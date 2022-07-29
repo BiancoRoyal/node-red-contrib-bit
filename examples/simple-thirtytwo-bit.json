@@ -1,0 +1,123 @@
+[
+  {
+    "id": "fb06f6b67f63a884",
+    "type": "tab",
+    "label": "32 Bit",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "a6c576bc6db10a14",
+    "type": "bit-simple-thirtytwo",
+    "z": "fb06f6b67f63a884",
+    "name": "",
+    "x": 330,
+    "y": 80,
+    "wires": [
+      [
+        "04115984b55122a9"
+      ]
+    ]
+  },
+  {
+    "id": "ad3cb3485fa2ecdb",
+    "type": "bit-thirtytwo",
+    "z": "fb06f6b67f63a884",
+    "name": "",
+    "x": 330,
+    "y": 380,
+    "wires": [
+      [
+        "04115984b55122a9"
+      ],
+      [
+        "04115984b55122a9"
+      ],
+      [
+        "04115984b55122a9"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [
+        "04115984b55122a9"
+      ],
+      [
+        "04115984b55122a9"
+      ],
+      [
+        "04115984b55122a9"
+      ],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
+  },
+  {
+    "id": "74bf4399ba57ce0b",
+    "type": "inject",
+    "z": "fb06f6b67f63a884",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "topic",
+        "vt": "str"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "262145",
+    "payloadType": "num",
+    "x": 130,
+    "y": 80,
+    "wires": [
+      [
+        "a6c576bc6db10a14",
+        "ad3cb3485fa2ecdb"
+      ]
+    ]
+  },
+  {
+    "id": "04115984b55122a9",
+    "type": "debug",
+    "z": "fb06f6b67f63a884",
+    "name": "debug 3",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 560,
+    "y": 80,
+    "wires": []
+  }
+]

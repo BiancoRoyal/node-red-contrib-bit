@@ -1,6 +1,13 @@
+code/
 node_modules
 npm-debug.log
-bit
+bit/
 node_modules_*/
 docs/icons
 .idea/
+docs/gen/
+coverage/
+.coverage/
+pki/
+.vscode/
+.nyc_output/
