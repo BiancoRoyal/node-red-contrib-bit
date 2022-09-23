@@ -14,11 +14,11 @@ node-red-contrib-bit
 
 ## International Node-RED IIoT Website
 
-For an international area, [Iniationware][4] has provided the [Node-RED PLUS International][5] website.
+For an international area, [Iniationware][4] has provided the [PLUS for Node-RED International][5] website.
 
 ## Node-RED IIoT Webseite Deutschland
 
-Für einen deutschsprachigen Bereich hat [Iniationware][4] die Webseite [Node-RED PLUS Germany][6] bereitgestellt.
+Für einen deutschsprachigen Bereich hat [Iniationware][4] die Webseite [PLUS for Node-RED Germany][6] bereitgestellt.
 
 ## Contribution Information
 
