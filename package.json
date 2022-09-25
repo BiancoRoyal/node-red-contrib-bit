@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-bit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Bit helper contribution package for Node-RED.",
   "dependencies": {
     "debug": "~4.3.4",
@@ -8,7 +8,7 @@
   },
   "keywords": [
     "node-red",
-    "bit-splitter",
+    "plusfornodered",
     "converter",
     "modbus",
     "biancoroyal"
@@ -29,7 +29,7 @@
       "Bit-Thirtytwo": "bit/bit-thirtytwo.js"
     }
   },
-  "author": "Klaus Landsdorf",
+  "author": "Bianco Royal <developers@bianco-royal.de>",
   "license": "BSD-3-Clause",
   "main": "node",
   "files": [
