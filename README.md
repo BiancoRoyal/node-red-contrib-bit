@@ -12,11 +12,11 @@
 node-red-contrib-bit 
 ========================
 
-## International Node-RED IIoT Website
+## International IIoT Website for Node-RED
 
 For an international area, [Iniationware][4] has provided the [PLUS for Node-RED International][5] website.
 
-## Node-RED IIoT Webseite Deutschland
+## IIoT Webseite Deutschland für Node-RED
 
 Für einen deutschsprachigen Bereich hat [Iniationware][4] die Webseite [PLUS for Node-RED Germany][6] bereitgestellt.
 
@@ -58,6 +58,6 @@ Debug will be activated by starting Node-RED with debug mode:
 [1]:https://nodered.org
 [2]:https://github.com/biancode
 [3]:https://flows.nodered.org/flow/9015efb0c2251945da20da8ff55f123e
-[4]:https://iniationware.com/
-[5]:http://node-red.plus/
-[6]:http://node-red-plus.de/
+[4]:https://github.com/Iniationware
+[5]:https://www.noderedplus.de/
+[6]:https://www.noderedplus.de/de/
