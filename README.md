@@ -1,8 +1,8 @@
-![Platform Node-RED](http://b.repl.ca/v1/Platform-Node--RED-red.png)
-![Contribution Bit](http://b.repl.ca/v1/Contribution-Bit-orange.png)
-![ES_Sourdce_Version](http://b.repl.ca/v1/JS_Source-ES2019-yellow.png)
-![ES_Deploy_Version](http://b.repl.ca/v1/JS_Deploy-ES2015-yellow.png)
-![NodeJS_Version](http://b.repl.ca/v1/NodeJS-LTS-green.png)
+![Platform Node-RED](https://img.shields.io/badge/Platform-Node--RED-red.png)
+![Contribution Bit](https://img.shields.io/badge/Contribution-Bit-orange.png)
+![ES_Sourdce_Version](https://img.shields.io/badge/JS_Source-ES2019-yellow.png)
+![ES_Deploy_Version](https://img.shields.io/badge/JS_Deploy-ES2015-yellow.png)
+![NodeJS_Version](https://img.shields.io/badge/NodeJS-LTS-green.png)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![NPM download](https://img.shields.io/npm/dm/node-red-contrib-bit.svg)](http://www.npm-stats.com/~packages/node-red-contrib-bit)
 [![NPM version](https://badge.fury.io/js/node-red-contrib-bit.png)](http://badge.fury.io/js/node-red-contrib-bit)
@@ -59,5 +59,5 @@ Debug will be activated by starting Node-RED with debug mode:
 [2]:https://github.com/biancode
 [3]:https://flows.nodered.org/flow/9015efb0c2251945da20da8ff55f123e
 [4]:https://github.com/Iniationware
-[5]:https://www.noderedplus.de/
-[6]:https://www.noderedplus.de/de/
+[5]:https://www.plus4nodered.com
+[6]:https://www.plus4nodered.de
