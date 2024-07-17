@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "A Bit helper contribution package for Node-RED maintained by P4NR B2B Community.",
   "dependencies": {
-    "debug": "~4.3.4",
+    "debug": "~4.3.5",
     "source-map-support": "~0.5.21"
   },
   "keywords": [
