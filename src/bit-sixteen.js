@@ -32,22 +32,22 @@ module.exports = function (RED) {
 
     function buildMessage (sixteenBit) {
       return [
-        { payload: (sixteenBit & 1) !== 0 },
-        { payload: (sixteenBit & 2) !== 0 },
-        { payload: (sixteenBit & 4) !== 0 },
-        { payload: (sixteenBit & 8) !== 0 },
-        { payload: (sixteenBit & 16) !== 0 },
-        { payload: (sixteenBit & 32) !== 0 },
-        { payload: (sixteenBit & 64) !== 0 },
-        { payload: (sixteenBit & 128) !== 0 },
-        { payload: (sixteenBit & 256) !== 0 },
-        { payload: (sixteenBit & 512) !== 0 },
-        { payload: (sixteenBit & 1024) !== 0 },
-        { payload: (sixteenBit & 2048) !== 0 },
-        { payload: (sixteenBit & 4096) !== 0 },
-        { payload: (sixteenBit & 8192) !== 0 },
-        { payload: (sixteenBit & 16384) !== 0 },
-        { payload: (sixteenBit & 32768) !== 0 }
+        { topic: 'bit1', payload: (sixteenBit & 1) !== 0 },
+        { topic: 'bit2', payload: (sixteenBit & 2) !== 0 },
+        { topic: 'bit3', payload: (sixteenBit & 4) !== 0 },
+        { topic: 'bit4', payload: (sixteenBit & 8) !== 0 },
+        { topic: 'bit5', payload: (sixteenBit & 16) !== 0 },
+        { topic: 'bit6', payload: (sixteenBit & 32) !== 0 },
+        { topic: 'bit7', payload: (sixteenBit & 64) !== 0 },
+        { topic: 'bit8', payload: (sixteenBit & 128) !== 0 },
+        { topic: 'bit9', payload: (sixteenBit & 256) !== 0 },
+        { topic: 'bit10', payload: (sixteenBit & 512) !== 0 },
+        { topic: 'bit11', payload: (sixteenBit & 1024) !== 0 },
+        { topic: 'bit12', payload: (sixteenBit & 2048) !== 0 },
+        { topic: 'bit13', payload: (sixteenBit & 4096) !== 0 },
+        { topic: 'bit14', payload: (sixteenBit & 8192) !== 0 },
+        { topic: 'bit15', payload: (sixteenBit & 16384) !== 0 },
+        { topic: 'bit16', payload: (sixteenBit & 32768) !== 0 }
       ]
     }
   }

@@ -32,7 +32,9 @@ module.exports = function (RED) {
 
     function buildMessage (thirtytwoBit) {
       return {
-        payload: [(thirtytwoBit & 1) !== 0,
+        topic: 'bits',
+        payload: [
+          (thirtytwoBit & 1) !== 0,
           (thirtytwoBit & 2) !== 0,
           (thirtytwoBit & 4) !== 0,
           (thirtytwoBit & 8) !== 0,
